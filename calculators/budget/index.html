@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="google-site-verification" content="IrvNJ2h9FgNfcf6WxqyBE7YhStrHev2_BIr9WO7GAsk" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='15.5' fill='none' stroke='%230e7a57' stroke-width='3'/%3E%3Cpath d='M17 7v20M21.5 11.5c-.8-1.2-2.4-2-4.5-2-2.7 0-4.5 1.3-4.5 3.1 0 4.4 9.3 2.4 9.3 6.8 0 1.9-2 3.1-4.8 3.1-2.2 0-4-1-4.9-2.4' fill='none' stroke='%23c98a1b' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="canonical" href="https://mtansari8765lab.github.io/steadycents/calculators/budget/" />
+    <title>Monthly Budget Calculator (Free, Private) | SteadyCents</title>
+    <meta name="description" content="Free monthly budget calculator: enter take-home pay and spending to see your needs, wants and savings split compared with the 50/30/20 guideline." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SteadyCents" />
+    <meta property="og:title" content="Monthly Budget Calculator (Free, Private) | SteadyCents" />
+    <meta property="og:description" content="Free monthly budget calculator: enter take-home pay and spending to see your needs, wants and savings split compared with the 50/30/20 guideline." />
+    <meta property="og:url" content="https://mtansari8765lab.github.io/steadycents/calculators/budget/" />
+    <meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8008490095120298"
+     crossorigin="anonymous"></script>
+<script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "WebPage", "name": "Monthly Budget Calculator (Free, Private) | SteadyCents", "url": "https://mtansari8765lab.github.io/steadycents/calculators/budget/", "description": "Free monthly budget calculator: enter take-home pay and spending to see your needs, wants and savings split compared with the 50/30/20 guideline."}
+    </script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "Organization", "name": "SteadyCents", "url": "https://mtansari8765lab.github.io/steadycents/"}
+    </script>
+    <style>
+      :root{
+        --bg:#f6f4ee; --surface:#ffffff; --surface2:#efeadf; --ink:#152420; --muted:#57685e;
+        --brand:#0b5a41; --brand2:#0e7a57; --brand-ink:#ffffff; --accent:#c98a1b; --accent-soft:#f7ead0;
+        --line:#ddd6c6; --good:#0e7a57; --warn:#a3540a; --bad:#b3352b; --bad-soft:#fbeae8;
+        --radius:14px; --shadow:0 10px 30px rgba(21,36,32,.08);
+        --font-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+        --font-display:"Newsreader",Georgia,"Times New Roman",serif;
+      }
+      @media (prefers-color-scheme: dark){
+        :root{
+          --bg:#0d1411; --surface:#15211b; --surface2:#1a2921; --ink:#e9f0ea; --muted:#a3b5a8;
+          --brand:#2f9e74; --brand2:#3cb587; --brand-ink:#08130e; --accent:#e0aa3e; --accent-soft:#2c2413;
+          --line:#2a3a31; --good:#3cb587; --warn:#e09a4e; --bad:#e07a6d; --bad-soft:#33201d;
+          --shadow:0 10px 30px rgba(0,0,0,.35);
+        }
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+      a{color:var(--brand2);text-decoration-thickness:1px;text-underline-offset:2px}
+      a:hover{text-decoration-thickness:2px}
+      h1,h2,h3{font-family:var(--font-display);line-height:1.15;margin:0 0 .5em;font-weight:600}
+      h1{font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.01em}
+      h2{font-size:clamp(1.5rem,3.4vw,2.1rem)}
+      h3{font-size:1.25rem}
+      p{margin:0 0 1em}
+      .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+      /* Header */
+      header.site{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+      .site-in{display:flex;align-items:center;gap:18px;max-width:1120px;margin:0 auto;padding:12px 20px}
+      .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+      .logo svg{flex:none}
+      .logo .word{font-family:var(--font-display);font-weight:700;font-size:1.45rem;letter-spacing:-.01em}
+      .logo .word b{color:var(--brand2);font-weight:700}
+      nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+      nav.main a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 11px;border-radius:9px}
+      nav.main a:hover,nav.main a[aria-current="page"]{background:var(--surface2);color:var(--brand)}
+      .menu-btn{display:none;margin-left:auto;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:9px 13px;font:inherit;font-weight:700;cursor:pointer;color:var(--ink)}
+      @media (max-width:860px){
+        nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:10px 16px 16px;gap:2px}
+        nav.main.open{display:flex}
+        nav.main a{padding:11px 10px}
+        .menu-btn{display:block}
+        header.site{position:relative}
+      }
+      /* Views */
+      .view{display:none}
+      .view.active{display:block}
+      main{padding-bottom:70px}
+      /* Hero */
+      .hero{padding:52px 0 40px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--surface) 0%,var(--bg) 100%)}
+      .hero .lede{font-size:1.18rem;color:var(--muted);max-width:640px}
+      .tagline-pill{display:inline-block;background:var(--accent-soft);color:var(--warn);font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:16px}
+      .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+      .btn{display:inline-block;background:var(--brand);color:var(--brand-ink);font-weight:700;padding:13px 22px;border-radius:11px;text-decoration:none;border:1px solid var(--brand);cursor:pointer;font:inherit;font-size:1rem}
+      .btn:hover{background:var(--brand2);border-color:var(--brand2)}
+      .btn.ghost{background:transparent;color:var(--brand);border-color:var(--brand)}
+      .btn.ghost:hover{background:var(--surface2)}
+      .btn.small{padding:9px 16px;font-size:.92rem}
+      /* Layout helpers */
+      section.block{padding:42px 0 6px}
+      .grid{display:grid;gap:18px}
+      .grid.c2{grid-template-columns:repeat(2,1fr)}
+      .grid.c3{grid-template-columns:repeat(3,1fr)}
+      .grid.c4{grid-template-columns:repeat(4,1fr)}
+      @media (max-width:900px){.grid.c3,.grid.c4{grid-template-columns:repeat(2,1fr)}}
+      @media (max-width:600px){.grid.c2,.grid.c3,.grid.c4{grid-template-columns:1fr}}
+      .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+      .card h3{margin-bottom:.35em}
+      .card p{color:var(--muted);font-size:.97rem}
+      .card .go{font-weight:700}
+      .kicker{font-size:.8rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--brand2);margin-bottom:8px}
+      .crumbs{font-size:.88rem;color:var(--muted);padding:20px 0 0}
+      .crumbs a{color:var(--muted)}
+      .page-head{padding:26px 0 8px;max-width:760px}
+      .page-head .lede{color:var(--muted);font-size:1.12rem}
+      /* Article */
+      article.body{max-width:760px}
+      article.body h2{margin-top:1.4em}
+      article.body h3{margin-top:1.2em}
+      article.body ul,article.body ol{margin:0 0 1em;padding-left:1.3em}
+      article.body li{margin-bottom:.45em}
+      .meta-line{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+      .callout{background:var(--surface2);border-radius:var(--radius);padding:18px 20px;margin:22px 0}
+      .callout p:last-child{margin-bottom:0}
+      .warnbox{background:var(--bad-soft);border-radius:var(--radius);padding:16px 20px;margin:22px 0}
+      .example{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:16px 20px;margin:20px 0}
+      .example .ex-t{font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:6px}
+      table.data{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:.96rem}
+      table.data th,table.data td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+      table.data th{font-weight:700;background:var(--surface2)}
+      table.data td.num,table.data th.num{text-align:right;font-variant-numeric:tabular-nums}
+      .faq dt{font-weight:700;margin-top:16px}
+      .faq dd{margin:4px 0 0;color:var(--muted)}
+      .sources{border-top:1px solid var(--line);margin-top:34px;padding-top:16px;font-size:.93rem;color:var(--muted)}
+      /* Calculators */
+      .calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+      @media (max-width:820px){.calc-layout{grid-template-columns:1fr}}
+      .calc-form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+      .calc-results{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+      .field{margin-bottom:15px}
+      .field label{display:block;font-weight:600;font-size:.93rem;margin-bottom:5px}
+      .field .hint{font-size:.83rem;color:var(--muted);margin-top:4px}
+      .field input,.field select{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:9px;font:inherit;background:var(--bg);color:var(--ink)}
+      .field input:focus,.field select:focus{outline:3px solid var(--accent-soft);border-color:var(--brand2)}
+      .field .err{display:none;color:var(--bad);font-size:.85rem;font-weight:600;margin-top:4px}
+      .field.invalid input{border-color:var(--bad)}
+      .field.invalid .err{display:block}
+      .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      @media (max-width:480px){.frow{grid-template-columns:1fr}}
+      .result-big{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--brand);line-height:1.1}
+      .result-row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+      .result-row:last-child{border-bottom:none}
+      .result-row b{font-variant-numeric:tabular-nums;text-align:right}
+      .bar-wrap{margin:12px 0}
+      .bar-label{display:flex;justify-content:space-between;font-size:.88rem;font-weight:600;margin-bottom:4px}
+      .bar{height:14px;background:var(--surface2);border-radius:7px;overflow:hidden}
+      .bar i{display:block;height:100%;background:var(--brand2);border-radius:7px;transition:width .4s ease}
+      .bar i.amber{background:var(--accent)}
+      .bar i.red{background:var(--bad)}
+      .assump{font-size:.88rem;color:var(--muted);background:var(--surface2);border-radius:10px;padding:14px 16px;margin-top:18px}
+      .assump p{margin:0}
+      .debt-row{display:grid;grid-template-columns:1.2fr 1fr .8fr 1fr auto;gap:8px;margin-bottom:10px;align-items:end}
+      @media (max-width:640px){.debt-row{grid-template-columns:1fr 1fr}.debt-row .rm{align-self:center}}
+      .debt-row label{font-size:.8rem;font-weight:600;display:block;margin-bottom:3px}
+      .debt-row input{width:100%;padding:9px 10px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:var(--bg);color:var(--ink)}
+      .rm{background:none;border:1px solid var(--line);border-radius:8px;width:38px;height:42px;cursor:pointer;color:var(--bad);font-weight:800;font-size:1rem}
+      .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+      @media (max-width:640px){.vs-grid{grid-template-columns:1fr}}
+      .vs-box{border:1.5px solid var(--line);border-radius:12px;padding:16px}
+      .vs-box.winner{border-color:var(--good);background:var(--surface2)}
+      .vs-box h3{font-size:1.05rem;font-family:var(--font-body);font-weight:800}
+      .winner-tag{display:inline-block;background:var(--good);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.05em;padding:2px 8px;border-radius:99px;text-transform:uppercase;margin-left:6px;vertical-align:2px}
+      @media (prefers-color-scheme: dark){.winner-tag{color:#08130e}}
+      /* Path steps */
+      .steps{counter-reset:step;display:grid;gap:14px}
+      .step{display:flex;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+      .step::before{counter-increment:step;content:counter(step);flex:none;width:38px;height:38px;border-radius:50%;background:var(--brand);color:var(--brand-ink);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+      .step h3{margin-bottom:.2em;font-size:1.08rem}
+      .step p{margin:0;color:var(--muted);font-size:.96rem}
+      /* Footer */
+      footer.site{border-top:1px solid var(--line);background:var(--surface);margin-top:60px}
+      .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px;padding:38px 0 10px}
+      @media (max-width:820px){.foot-grid{grid-template-columns:1fr 1fr}}
+      footer.site h4{margin:0 0 10px;font-size:.95rem}
+      footer.site ul{list-style:none;margin:0;padding:0}
+      footer.site li{margin-bottom:7px;font-size:.93rem}
+      footer.site a{color:var(--muted);text-decoration:none}
+      footer.site a:hover{color:var(--brand);text-decoration:underline}
+      .foot-note{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding:16px 0 30px;margin-top:16px}
+      .disclaimer-strip{background:var(--accent-soft);border-radius:var(--radius);padding:16px 20px;font-size:.92rem;margin:26px 0 0}
+      .check-list{list-style:none;padding:0;margin:0}
+      .check-list li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid var(--line)}
+      .check-list li:last-child{border-bottom:none}
+      .check-list li::before{content:"";position:absolute;left:2px;top:13px;width:18px;height:18px;border-radius:50%;background:var(--good)}
+      .check-list li::after{content:"";position:absolute;left:8px;top:17px;width:6px;height:9px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(42deg)}
+      .check-list li.todo::before{background:var(--accent)}
+      .check-list li.todo::after{content:"";border:none;left:7px;top:20px;width:8px;height:3px;background:#fff;transform:none;border-radius:2px}
+      .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:10px;font-weight:600;font-size:.93rem;opacity:0;pointer-events:none;transition:all .25s ease;z-index:99}
+      .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+      .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+      :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+      @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+    
+      .view{display:block !important}
+    </style>
+  </head>
+  <body>
+<header class="site">
+      <div class="site-in">
+        <a class="logo" href="../../" aria-label="SteadyCents home">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="#0e7a57" stroke-width="3"/><path d="M17 7v20M21.5 11.5c-.8-1.2-2.4-2-4.5-2-2.7 0-4.5 1.3-4.5 3.1 0 4.4 9.3 2.4 9.3 6.8 0 1.9-2 3.1-4.8 3.1-2.2 0-4-1-4.9-2.4" fill="none" stroke="#c98a1b" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <span class="word">Steady<b>Cents</b></span>
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+        <nav class="main" id="mainNav" aria-label="Main">
+          <a href="../../" data-nav="home">Home</a>
+          <a href="../../budgeting/" data-nav="budgeting">Budgeting</a>
+          <a href="../../saving/" data-nav="saving">Saving</a>
+          <a href="../../debt/" data-nav="debt">Debt</a>
+          <a href="../../credit/" data-nav="credit">Credit</a>
+          <a href="../../calculators/" data-nav="calculators">Calculators</a>
+          <a href="../../guides/" data-nav="guides">Guides</a>
+          <a href="../../us/" data-nav="us">United States</a>
+          <a href="../../about/" data-nav="about">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="app">
+<section class="view active" data-route="calculators/budget">
+        <div class="wrap">
+          <p class="crumbs"><a href="../../">Home</a> › <a href="../../calculators/">Calculators</a> › Monthly Budget</p>
+          <div class="page-head"><h1>Monthly Budget Calculator</h1><p class="lede">Enter your monthly take-home pay and spending. You'll see your needs/wants/savings split, what's left over, and how you compare with the 50/30/20 guideline.</p></div>
+          
+<div class="card" style="margin:18px 0">
+  <h2 style="margin-top:0">Use the interactive calculator</h2>
+  <p>This page explains how the Monthly Budget Calculator works, with a worked example. To run
+  your own numbers, use the interactive version — it calculates instantly and
+  privately in your browser, and nothing you enter is sent anywhere.</p>
+  <p><a class="btn" href="../../#/calculators/budget">Open the Monthly Budget Calculator &rarr;</a></p>
+</div>
+<article class="body" style="margin-top:30px">
+            <h2>How this calculator works</h2>
+            <p>It totals each group and expresses it as a percentage of your take-home income, then compares each group with the 50/30/20 guideline (50% needs, 30% wants, 20% savings). The guideline is a starting point, not a verdict — in high-rent cities needs often exceed 50%, which usually means adjusting the other two groups rather than abandoning the plan. Read the full method in <a href="../../guides/how-to-make-a-monthly-budget/">How to Make a Monthly Budget</a>.</p>
+            <div class="assump"><p><strong>Assumptions &amp; limits:</strong> monthly figures only; use after-tax (take-home) income for a fair comparison. Irregular annual bills should be divided by 12 and included. Percentages are rounded.</p></div>
+          
+<h2>How the maths works</h2>
+<p>The calculator adds up each group — needs, wants, and savings plus extra debt payments — and expresses each as a percentage of your monthly take-home (after-tax) income. It then compares each group with the 50/30/20 guideline: 50% needs, 30% wants, 20% savings. The guideline is a starting point, not a verdict; the comparison is what makes the result useful, because it shows which group is pulling the budget off balance.</p>
+<h2>Worked example</h2>
+<p>Take-home pay of $4,000 a month. Needs of $2,000 (rent, utilities, groceries, transport, insurance), wants of $1,200 (dining out, entertainment, shopping) and savings of $800. That is exactly 50% needs, 30% wants and 20% savings, with $0 left over — a textbook 50/30/20 split. If instead needs were $2,400 (60%), the calculator would flag needs as above the guideline and show that wants and savings together must fit in the remaining 40%.</p>
+<h2>Questions</h2>
+<h3>What counts as a need?</h3>
+<p>A need is spending you cannot reasonably avoid in the short term: housing, utilities, groceries, transport to work, insurance and minimum debt payments. Dining out, streaming subscriptions and new clothes beyond replacements are wants — even when they feel fixed.</p>
+<h3>What if my needs are over 50%?</h3>
+<p>That is common, especially with high rent. It does not mean the budget has failed; it means wants and savings share a smaller slice, and the honest move is to shrink those two groups deliberately rather than pretend the numbers add up. The guide <a href="../../guides/how-to-make-a-monthly-budget/">How to Make a Monthly Budget</a> walks through the full method.</p>
+
+          </article>
+        </div>
+      </section>
+    </main>
+<footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <h4>SteadyCents</h4>
+            <p style="color:var(--muted);font-size:.93rem;max-width:300px">Steady money guidance and free calculators. Practical personal finance education for everyday life — no hype, no promises we can't keep.</p>
+          </div>
+          <div><h4>Topics</h4><ul>
+            <li><a href="../../budgeting/">Budgeting</a></li>
+            <li><a href="../../saving/">Saving Money</a></li>
+            <li><a href="../../debt/">Debt Education</a></li>
+            <li><a href="../../credit/">Credit Education</a></li>
+            <li><a href="../../us/">United States Hub</a></li>
+          </ul></div>
+          <div><h4>Calculators</h4><ul>
+            <li><a href="./">Monthly Budget</a></li>
+            <li><a href="../../calculators/savings-goal/">Savings Goal</a></li>
+            <li><a href="../../calculators/compound-interest/">Compound Interest</a></li>
+            <li><a href="../../calculators/debt-payoff/">Debt Payoff</a></li>
+            <li><a href="../../calculators/">All calculators</a></li>
+          </ul></div>
+          <div><h4>Trust &amp; Legal</h4><ul>
+            <li><a href="../../about/">About Us</a></li>
+            <li><a href="../../contact/">Contact Us</a></li>
+            <li><a href="../../editorial-policy/">Editorial Policy</a></li>
+            <li><a href="../../corrections/">Corrections Policy</a></li>
+            <li><a href="../../privacy/">Privacy Policy</a></li>
+            <li><a href="../../terms/">Terms of Use</a></li>
+            <li><a href="../../disclaimer/">Financial Disclaimer</a></li>
+            <li><a href="../../affiliate-disclosure/">Affiliate Disclosure</a></li>
+            <li><a href="../../cookies/">Cookie Information</a></li>
+            <li><a href="../../plan/">Editorial Plan &amp; Status</a></li>
+          </ul></div>
+        </div>
+        <p class="foot-note">SteadyCents provides general educational information only — not financial, investment, tax, legal or credit advice. Calculator results are estimates based on the assumptions shown on each page and are not guaranteed outcomes. Country-specific rules are labeled; always confirm current rules with official sources (US: CFPB &amp; FTC · UK: MoneyHelper &amp; FCA · Canada: FCAC · Australia: Moneysmart &amp; ASIC). © 2026 SteadyCents.</p>
+      </div>
+    </footer>
+<script>
+(function(){var b=document.getElementById("menuBtn"),n=document.getElementById("mainNav");if(b&&n){b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});}})();
+</script>
+
+  </body>
+</html>
