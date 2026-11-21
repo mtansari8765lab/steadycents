@@ -233,7 +233,7 @@
             <p class="meta-line">Last updated November 18, 2026</p>
             <p><strong>Current status:</strong> Dr.Budget' own pages set no cookies, and its calculators store nothing on your device. Any preferences the page uses (such as remembering a currency choice during a visit) are held in memory only and disappear when you close the tab. The Google AdSense code is installed, and advertising is served on this site through Google AdSense (Auto Ads). Google and its partners may place and read their own advertising cookies — see the "Advertising and cookies" section of our <a href="../privacy/">Privacy Policy</a>.</p>
             <h2>Consent, analytics and future changes</h2>
-            <p>Google Analytics (GA4) is installed on this site, with analytics storage denied by default: no analytics cookies are set and no analytics identifier is stored until you accept cookies through the consent message. For advertising cookies, a Google Funding Choices consent message is published for this site; visitors in the UK and EEA are shown the message and can accept, reject, or manage their preferences. If any other new cookie-setting feature is ever switched on:</p>
+            <p>Google Analytics (GA4) is installed on this site, with analytics storage denied by default: no analytics cookies are set and no analytics identifier is stored until you accept cookies using the cookie banner at the bottom of this site. For advertising cookies, a Google Funding Choices consent message is published for this site; visitors in the UK and EEA are shown the message and can accept, reject, or manage their preferences. If any other new cookie-setting feature is ever switched on:</p>
             <ul>
               <li>This page and the <a href="../privacy/">Privacy Policy</a> will be updated to name the cookies and their purposes.</li>
               <li>Where consent is legally required (including the UK and EEA), a consent banner will ask before non-essential cookies are set, and declining will keep the site fully usable.</li>
@@ -284,5 +284,28 @@
 (function(){var b=document.getElementById("menuBtn"),n=document.getElementById("mainNav");if(b&&n){b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});}})();
 </script>
 
+  <div id="sc-consent" hidden style="position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1f2937;color:#f9fafb;padding:14px 18px;font-size:14px;line-height:1.5;box-shadow:0 -2px 12px rgba(0,0,0,.25);font-family:system-ui,-apple-system,sans-serif;">
+  <span>We use cookies for anonymous analytics (Google Analytics) to see which pages are popular. No personal data is collected. <a href="/steadycents/privacy/" style="color:#93c5fd;text-decoration:underline;">Privacy policy</a></span>
+  <span style="display:inline-block;margin-left:12px;white-space:nowrap;margin-top:8px;">
+    <button id="sc-consent-accept" style="background:#2563eb;color:#fff;border:0;border-radius:6px;padding:8px 16px;margin-right:8px;cursor:pointer;font-size:14px;">Accept</button>
+    <button id="sc-consent-decline" style="background:transparent;color:#e5e7eb;border:1px solid #6b7280;border-radius:6px;padding:8px 16px;cursor:pointer;font-size:14px;">Decline</button>
+  </span>
+</div>
+<script>
+(function(){
+  var KEY='sc-consent-choice', banner=document.getElementById('sc-consent');
+  function apply(choice){
+    if(window.gtag){try{gtag('consent','update',{'analytics_storage':choice});}catch(e){}}
+    try{localStorage.setItem(KEY,choice);}catch(e){}
+    banner.hidden=true;
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  if(saved==='granted'||saved==='denied'){ if(window.gtag){try{gtag('consent','update',{'analytics_storage':saved});}catch(e){}} }
+  else { banner.hidden=false; }
+  document.getElementById('sc-consent-accept').addEventListener('click',function(){apply('granted');});
+  document.getElementById('sc-consent-decline').addEventListener('click',function(){apply('denied');});
+})();
+</script>
   </body>
 </html>

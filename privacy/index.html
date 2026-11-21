@@ -237,7 +237,7 @@
             <ul>
               <li><strong>Calculator inputs:</strong> none — processed locally on your device only.</li>
               <li><strong>Contact drafts:</strong> the draft box on the Contact page keeps text in your browser tab only; nothing is transmitted or saved by us.</li>
-              <li><strong>Analytics:</strong> Google Analytics (GA4) is installed on this site to measure aggregate traffic — which pages are visited, roughly where visitors come from, and what device and browser they use. Analytics storage is denied by default: Google Analytics does not set analytics cookies or store an identifier until you accept cookies through the consent message. Your calculator inputs are never sent to Google Analytics. You can opt out at any time with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a> or by blocking third-party cookies in your browser settings. Google Search Console is also connected; it reports only aggregate search data (queries and clicks) and sets no cookies.</li>
+              <li><strong>Analytics:</strong> Google Analytics (GA4) is installed on this site to measure aggregate traffic — which pages are visited, roughly where visitors come from, and what device and browser they use. Analytics storage is denied by default: Google Analytics does not set analytics cookies or store an identifier until you accept cookies using the cookie banner at the bottom of this site. Your calculator inputs are never sent to Google Analytics. You can opt out at any time with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a> or by blocking third-party cookies in your browser settings. Google Search Console is also connected; it reports only aggregate search data (queries and clicks) and sets no cookies.</li>
               <li><strong>Advertising:</strong> the Google AdSense code is installed on this site, and advertisements are served through Google AdSense (Auto Ads). How Google and its advertising partners use cookies and data is covered in the "Advertising and cookies" section below.</li>
             </ul>
             <h2>Advertising and cookies</h2>
@@ -296,5 +296,28 @@
 (function(){var b=document.getElementById("menuBtn"),n=document.getElementById("mainNav");if(b&&n){b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});}})();
 </script>
 
+  <div id="sc-consent" hidden style="position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1f2937;color:#f9fafb;padding:14px 18px;font-size:14px;line-height:1.5;box-shadow:0 -2px 12px rgba(0,0,0,.25);font-family:system-ui,-apple-system,sans-serif;">
+  <span>We use cookies for anonymous analytics (Google Analytics) to see which pages are popular. No personal data is collected. <a href="/steadycents/privacy/" style="color:#93c5fd;text-decoration:underline;">Privacy policy</a></span>
+  <span style="display:inline-block;margin-left:12px;white-space:nowrap;margin-top:8px;">
+    <button id="sc-consent-accept" style="background:#2563eb;color:#fff;border:0;border-radius:6px;padding:8px 16px;margin-right:8px;cursor:pointer;font-size:14px;">Accept</button>
+    <button id="sc-consent-decline" style="background:transparent;color:#e5e7eb;border:1px solid #6b7280;border-radius:6px;padding:8px 16px;cursor:pointer;font-size:14px;">Decline</button>
+  </span>
+</div>
+<script>
+(function(){
+  var KEY='sc-consent-choice', banner=document.getElementById('sc-consent');
+  function apply(choice){
+    if(window.gtag){try{gtag('consent','update',{'analytics_storage':choice});}catch(e){}}
+    try{localStorage.setItem(KEY,choice);}catch(e){}
+    banner.hidden=true;
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  if(saved==='granted'||saved==='denied'){ if(window.gtag){try{gtag('consent','update',{'analytics_storage':saved});}catch(e){}} }
+  else { banner.hidden=false; }
+  document.getElementById('sc-consent-accept').addEventListener('click',function(){apply('granted');});
+  document.getElementById('sc-consent-decline').addEventListener('click',function(){apply('denied');});
+})();
+</script>
   </body>
 </html>
